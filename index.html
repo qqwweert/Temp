@@ -60,8 +60,7 @@
             <table class="table text-center" v-if="people.length" style="vertical-align: middle;">
                 <tr style="position: sticky; top: 0px; background: #dee2e6;">
                     <th>
-                        <a class="navbar-brand" href="#">MyDocument</a>
-                        <a class="btn btn-link" href="#" data-bs-toggle="modal" data-bs-target="#other-modal">Other</a>
+                        <span class="btn" data-bs-toggle="modal" data-bs-target="#other-modal" style="padding: 0; font-size: inherit;">MyDocument Other</span>
                     </th>
                     <th v-for="i in actions" v-text="i"></th>
                     <th>Ещё что-то</th>
