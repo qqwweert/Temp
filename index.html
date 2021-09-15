@@ -63,7 +63,7 @@
             </div>
         </nav>
         <div class="container" style="font-size: xx-small;">
-            <table class="table text-center" v-if="people.length">
+            <table class="table text-center" v-if="people.length" style="vertical-align: middle;">
                 <tr style="position: sticky; top: 0px; background: #dee2e6;">
                     <th></th>
                     <th v-for="i in actions" v-text="i"></th>
@@ -75,7 +75,7 @@
                         <input type="checkbox" v-model="table[date][i][j]">
                     </td>
                     <td>
-                        <button class="btn btn-primary" @click="current = i" data-bs-toggle="modal" data-bs-target="#other-action-modal" style="padding: 0 0.75rem;">+</button>
+                        <span class="btn" @click="current = i" data-bs-toggle="modal" data-bs-target="#other-action-modal" style="padding: 0;">+</span>
                     </td>          
                 </tr>
             </table>
