@@ -108,15 +108,14 @@
             people = data.people;
             actions = data.actions;
             table = data.table;
-            table[date] = table[date] || Object.fromEntries(
-                people.map(i => [i, {$: "", $hidden: false}]));
+            table[date] = table[date] || Object.fromEntries(people.map(i => [i, {}]));
             return { people, actions, table, date, current: null };
         },
         methods: {
             updateData() {
                 const people = this.people;
                 this.table = {
-                    [this.date]: Object.fromEntries(people.map(i => [i, {$: "", $hidden: false}]))
+                    [this.date]: Object.fromEntries(people.map(i => [i, {}]))
                 };
             },
             saveData() {
@@ -168,7 +167,7 @@
             table: { handler: 'saveData', deep: true },
             date(date) {
                 this.table[date] = this.table[date] || Object.fromEntries(
-                    this.people.map(i => [i, {$: ""}]));
+                    this.people.map(i => [i, {}]));
             },
         },
     }).mount("#app");;
